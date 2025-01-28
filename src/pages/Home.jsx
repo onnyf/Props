@@ -1,8 +1,18 @@
+import Mainbar from "../components/Mainbar"
+import RightSidebar from "../components/RightSidebar"
+import Sidebar from "../components/Sidebar"
 
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+    <main className="w-[100%] flex items-center ">
+      <Sidebar/>
+      <Mainbar/>
+      <RightSidebar/>
+    </main>
+    
+    </>
   )
 }
 

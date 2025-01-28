@@ -6,7 +6,7 @@ const Blogss = () => {
     <>
     
     <main className="bg-gray-100 px-[300px] min-h-screen pt-4">
-    <Blog title='This is first blog' author='Alex'/>
+    <Blog title='This is first blog' author='Gbenga'/>
     <Blog title='This is second blog'  author='Ehis'/>
     <Blog title='This is third blog'  author='Ayo'/>
     <Blog title='This is fourth blog'  author='Damola'/>
