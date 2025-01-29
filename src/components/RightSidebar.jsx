@@ -3,7 +3,8 @@
 const RightSidebar = () => {
   return (
     <section className=" min-h-screen border w-[25%]">
-      <div>
+     <div>
+     <div>
         <img src="public/L4.png" alt="" />
       </div>
       <div>
@@ -15,6 +16,7 @@ const RightSidebar = () => {
       <div>
         <img src="public/L1.jpg" alt="" />
       </div>
+     </div>
     </section>
   )
 }

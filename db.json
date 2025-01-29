@@ -1,0 +1,54 @@
+{
+  "blogs": [
+    {
+      "id": "1",
+      "title": "my first blog",
+      "content": "this is the content of my first blog",
+      "author": "Olufemi"
+    },
+    {
+      "id": "d0a6",
+      "title": "kjh",
+      "content": ",mnb",
+      "author": ""
+    },
+    {
+      "id": "ce85",
+      "fullname": "",
+      "email": "onnyf2003@gmail.com",
+      "phone": "oojnnn",
+      "address": "juugigi",
+      "date": "2025-01-17",
+      "password": "1234567"
+    },
+    {
+      "id": "2c7e",
+      "fullname": "",
+      "email": "onnyf2003@gmail.com",
+      "phone": "oojnnn",
+      "address": "juugigi",
+      "date": "2025-01-17",
+      "password": "1234567"
+    },
+    {
+      "id": "bec5",
+      "fullname": "hhhhhh",
+      "email": "onnyf2003@gmail.com",
+      "phone": "oojnnn",
+      "address": "juugigi",
+      "date": "2025-01-17",
+      "password": "1234567"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "full name": "Oni Olufemi",
+      "emal": "onnyf2003@gmail.com",
+      "phone": 2348157198212,
+      "address": "yaba",
+      "age": 35,
+      "password": 1234567
+    }
+  ]
+}

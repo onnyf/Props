@@ -3,6 +3,7 @@ import App from "./App";
 import Home from "./pages/Home";
 import Create from "./pages/Create";
 import Blogss from "./pages/Blogss";
+import Register from "./pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
         path: "blogss",
         element: <Blogss />,
       },
+
+      {
+        path:"register",
+        element:<Register/>,
+      }
     ],
   },
 ]);

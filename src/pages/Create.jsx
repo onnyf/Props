@@ -1,34 +1,60 @@
 import { useState } from "react";
 
 const Create = () => {
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
-  const [author, setAuthor] = useState('');
-  const [image, setImage] = useState(null); 
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [author, setAuthor] = useState("");
+  const [image, setImage] = useState(null);
+  // const [isLoading, setIsLoading]= useState(false)
 
   const handleImageChange = (e) => {
-    setImage(e.target.files[0]); 
+    setImage(e.target.files[0]);
   };
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   console.log({ title, content, author, image });
+
+  // setTitle('');
+  // setContent('');
+  // setAuthor('');
+  //   setImage(null);
+  // };
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Form submission logic, e.g., uploading data to an API
-    console.log({ title, content, author, image });
+    const blog = { title, content, author };
 
-    setTitle('');
-    setContent('');
-    setAuthor('');
-    setImage(null);
+    try {
+      const response = await fetch("http://localhost:9000/blogs", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(blog),
+      });
+      if (!response.ok) {
+        throw new Error("fail to submit blog");
+      }
+
+      setTitle("");
+      setContent("");
+      setAuthor("");
+      alert("blog submitted successfully");
+    } catch (error) {
+      console.log(error);
+    }
   };
-
   return (
     <main className="bg-gray-100 flex items-center min-h-screen flex-col">
       <div className="mt-20">
         <h2 className="text-center font-bold text-2xl underline text-slate-800">
           Add a blog
         </h2>
-        <form onSubmit={handleSubmit} className="shadow-xl p-10 bg-white rounded mt-10">
+        <form
+          onSubmit={handleSubmit}
+          className="shadow-xl p-10 bg-white rounded mt-10"
+        >
           <div>
             <label htmlFor="title">Title:</label>
             <input
@@ -58,16 +84,16 @@ const Create = () => {
               className="bg-gray-100 p-2 shadow-xs mb-2"
               type="file"
               id="image"
-              onChange={handleImageChange} // Update image state
+              onChange={handleImageChange}
             />
           </div>
 
           <div>
             <label htmlFor="author">Author:</label>
-            <select 
-              value={author} 
-              onChange={(e) => setAuthor(e.target.value)} 
-              className="ms-2 bg-gray-100 p-2 shadow-xs" 
+            <select
+              value={author}
+              onChange={(e) => setAuthor(e.target.value)}
+              className="ms-2 bg-gray-100 p-2 shadow-xs"
               id="author"
             >
               <option value="">Select Author</option>
